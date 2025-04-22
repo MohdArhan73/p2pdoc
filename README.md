@@ -59,6 +59,64 @@ rooms
    };
    ```
 
+## How to Run
+
+### Option 1: Using a Local Server
+
+1. Install a local server (if you don't have one):
+   - For Node.js users: `npm install -g http-server`
+   - For Python users: Python comes with a built-in server
+
+2. Start the server:
+   - Using http-server:
+     ```bash
+     http-server public
+     ```
+   - Using Python:
+     ```bash
+     # Python 3
+     python -m http.server 8000
+     # Python 2
+     python -m SimpleHTTPServer 8000
+     ```
+
+3. Open your browser and navigate to:
+   - http://localhost:8080 (for http-server)
+   - http://localhost:8000 (for Python server)
+
+### Option 2: Using Firebase Local Emulator
+
+1. Install Firebase CLI:
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. Initialize Firebase emulators:
+   ```bash
+   firebase init emulators
+   ```
+
+3. Start the emulators:
+   ```bash
+   firebase emulators:start
+   ```
+
+4. Open your browser and navigate to the local URL provided by the emulator
+
+### Option 3: Direct File Opening (Not Recommended)
+
+⚠️ Note: This method may not work properly due to browser security restrictions.
+
+1. Simply open the `index.html` file directly in your browser:
+   ```bash
+   # On Windows
+   start public/index.html
+   # On macOS
+   open public/index.html
+   # On Linux
+   xdg-open public/index.html
+   ```
+
 ## Deployment
 
 1. Install Firebase CLI:
@@ -122,4 +180,8 @@ The application works in modern browsers that support WebRTC:
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
