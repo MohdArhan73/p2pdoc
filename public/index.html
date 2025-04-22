@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P File Transfer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="room-controls">
+            <button id="createRoom">Create Room</button>
+            <div class="join-room">
+                <input type="text" id="roomId" placeholder="Enter Room ID">
+                <button id="joinRoom">Join Room</button>
+            </div>
+        </div>
+
+        <div class="file-transfer" style="display: none;">
+            <div class="file-input">
+                <input type="file" id="fileInput" disabled>
+                <button id="sendFile" disabled>Send File</button>
+            </div>
+            
+            <div class="progress-bars">
+                <div class="progress-container">
+                    <label>Sender Progress:</label>
+                    <progress id="senderProgress" value="0" max="100"></progress>
+                </div>
+                <div class="progress-container">
+                    <label>Receiver Progress:</label>
+                    <progress id="receiverProgress" value="0" max="100"></progress>
+                </div>
+            </div>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html> 
